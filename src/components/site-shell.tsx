@@ -30,10 +30,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen overflow-x-hidden bg-background">
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,padding,box-shadow,border-color] duration-200 ease-out",
+          "fixed inset-x-0 top-0 z-50 border-b border-primary-foreground/10 transition-[background-color,padding,box-shadow,border-color] duration-200 ease-out",
           scrolled
-            ? "border-border/60 bg-background/90 py-2.5 shadow-nav backdrop-blur-md"
-            : "border-transparent bg-background/80 py-4 backdrop-blur-xs",
+            ? "bg-primary/95 py-2.5 shadow-nav backdrop-blur-md"
+            : "bg-primary/95 py-4 backdrop-blur-xs",
         )}
       >
         <div className="site-container flex items-center justify-between gap-5">
@@ -55,9 +55,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div className="hidden items-center gap-4 lg:flex">
             <a
               href="tel:+16479018914"
-              className="flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+              className="flex items-center gap-2 text-sm font-semibold text-white/90 transition-colors hover:text-white"
             >
-              <Phone className="size-4 text-accent-strong translate-y-[-0.5px]" />
+              <Phone className="size-4 text-[#f2c453] translate-y-[-0.5px]" />
               {contact.phone}
             </a>
             <a
@@ -68,7 +68,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               aria-label="Chat on WhatsApp"
             >
               <WhatsAppIcon className="size-4" />
-              <span className="hidden xl:inline">WhatsApp</span>
+              <span className="hidden xl:inline text-white/90">WhatsApp</span>
             </a>
             <Button asChild variant="gold">
               <Link to="/contact">Get a Quote</Link>
