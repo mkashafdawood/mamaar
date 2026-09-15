@@ -16,7 +16,9 @@ export function BrandLogo({
       <img
         src={logo}
         alt="Maamaar International Limited"
-        className={cn("h-11 w-auto object-contain transition-all", compact && "h-8")}
+        width={180}
+        height={44}
+        className={cn("h-11 w-auto object-contain transition-transform duration-150 ease-out", compact && "h-8")}
       />
     </div>
   );

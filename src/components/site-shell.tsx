@@ -30,8 +30,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen overflow-x-hidden bg-background">
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-300",
-          scrolled ? "bg-background/95 py-2 shadow-nav backdrop-blur" : "bg-background py-4",
+          "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,padding,box-shadow,border-color] duration-200 ease-out",
+          scrolled
+            ? "border-border/60 bg-background/90 py-2.5 shadow-nav backdrop-blur-md"
+            : "border-transparent bg-background/80 py-4 backdrop-blur-xs",
         )}
       >
         <div className="site-container flex items-center justify-between gap-5">
@@ -53,16 +55,16 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div className="hidden items-center gap-4 lg:flex">
             <a
               href="tel:+16479018914"
-              className="flex items-center gap-2 text-sm font-bold text-primary"
+              className="flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
             >
-              <Phone className="size-4 text-accent-strong" />
+              <Phone className="size-4 text-accent-strong translate-y-[-0.5px]" />
               {contact.phone}
             </a>
             <a
               href={contact.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm font-semibold text-[#25D366] hover:opacity-85"
+              className="flex items-center gap-1.5 text-sm font-semibold text-[#25D366] transition-[transform,opacity] duration-150 ease-out hover:opacity-85 active:scale-[0.96]"
               aria-label="Chat on WhatsApp"
             >
               <WhatsAppIcon className="size-4" />
@@ -85,7 +87,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       </header>
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-primary transition-transform duration-500 lg:hidden",
+          "fixed inset-0 z-40 bg-primary transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)] lg:hidden",
           open ? "translate-x-0" : "translate-x-full",
         )}
       >

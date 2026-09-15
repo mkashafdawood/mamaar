@@ -61,7 +61,7 @@ function AboutPage() {
               <img
                 src={warehousePallets}
                 alt="Maamaar International overstock apparel warehouse inventory"
-                className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-500 ease-out hover:scale-105 image-outline"
                 loading="lazy"
               />
             </div>

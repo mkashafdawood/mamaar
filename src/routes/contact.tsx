@@ -47,7 +47,7 @@ function ContactPage() {
             <p className="eyebrow">Direct contact</p>
             <h2 className="section-title">Talk to our export team</h2>
             <div className="mt-8 grid gap-4">
-              <a className="contact-row transition hover:text-primary" href="tel:+16479018914">
+              <a className="contact-row transition-colors duration-150 hover:text-primary" href="tel:+16479018914">
                 <Phone />{" "}
                 <span>
                   <b>Phone</b>
@@ -55,7 +55,7 @@ function ContactPage() {
                 </span>
               </a>
               <a
-                className="contact-row transition hover:text-[#25D366]"
+                className="contact-row transition-colors duration-150 hover:text-[#25D366]"
                 href={contact.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +69,7 @@ function ContactPage() {
                 </span>
               </a>
               <a
-                className="contact-row transition hover:text-primary"
+                className="contact-row transition-colors duration-150 hover:text-primary"
                 href={`mailto:${contact.email}`}
               >
                 <Mail />{" "}
@@ -100,7 +100,7 @@ function ContactPage() {
                   href={contact.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:scale-105 hover:bg-[#20bd5a]"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-md transition-[transform,background-color] duration-150 ease-out hover:bg-[#20bd5a] active:scale-[0.96]"
                 >
                   <WhatsAppIcon className="size-5" /> Continue on WhatsApp
                 </a>

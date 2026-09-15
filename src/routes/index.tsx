@@ -71,10 +71,8 @@ function HomePage() {
             </div>
             <h1 className="hero-title">
               <span>Connecting North American</span>
-              <span>
-                <em>Overstock</em> with Global
-              </span>
-              <span>Markets</span>
+              <span>Overstock with Global</span>
+              <span>Wholesale Markets</span>
             </h1>
             <p className="hero-copy">
               Trusted wholesale exporter of branded overstock, surplus & liquidation apparel since
@@ -90,7 +88,7 @@ function HomePage() {
                 href={contact.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_16px_rgba(37,211,102,0.4)] transition hover:scale-105 hover:bg-[#20bd5a]"
+                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_16px_rgba(37,211,102,0.35)] transition-[transform,background-color,box-shadow] duration-150 ease-out hover:bg-[#20bd5a] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] active:scale-[0.96]"
                 aria-label="Chat directly on WhatsApp"
               >
                 <WhatsAppIcon className="size-5" /> Chat on WhatsApp
@@ -163,20 +161,20 @@ function HomePage() {
                       muted
                       loop
                       playsInline
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 image-outline"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground shadow-sm">
+                      <span className="inline-block rounded-full bg-accent/95 px-2.5 py-1 text-xs font-bold text-accent-foreground shadow-xs backdrop-blur-xs">
                         {item.tag}
                       </span>
                     </div>
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-                      <p className="font-display text-sm font-bold text-white">{item.title}</p>
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-4">
+                      <p className="font-display text-sm font-bold text-white leading-snug">{item.title}</p>
                       <a
                         href={`${contact.whatsapp}?text=${encodeURIComponent(`Hello, I'm interested in wholesale lot: ${item.title} (${item.tag})`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#25D366] hover:underline"
+                        className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-[#25D366] transition-[transform,color] duration-150 ease-out hover:text-white active:scale-[0.96]"
                       >
                         <WhatsAppIcon className="size-3.5" /> Inquire on WhatsApp
                       </a>
@@ -343,7 +341,7 @@ function HomePage() {
               href={contact.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition hover:scale-105 hover:bg-[#20bd5a]"
+              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-[transform,background-color,box-shadow] duration-150 ease-out hover:bg-[#20bd5a] hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] active:scale-[0.96]"
             >
               <WhatsAppIcon className="size-5" /> Chat on WhatsApp
             </a>
