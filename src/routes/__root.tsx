@@ -79,15 +79,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Maamaar International Limited" },
-      { name: "description", content: "Canadian exporter of wholesale overstock and liquidation apparel." },
+      {
+        name: "description",
+        content: "Canadian exporter of wholesale overstock and liquidation apparel.",
+      },
       { name: "author", content: "Maamaar International Limited" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -119,7 +127,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteShell><Outlet /></SiteShell>
+      <SiteShell>
+        <Outlet />
+      </SiteShell>
     </QueryClientProvider>
   );
 }

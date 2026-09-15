@@ -1,18 +1,168 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, Globe2, Handshake, SearchCheck, ShieldCheck } from "lucide-react";
+import warehousePallets from "@/assets/warehouse-pallets-2.jpeg";
 import { PageHero } from "@/components/site-shell";
 import { CountUp, Reveal } from "@/components/reveal";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({ meta: [{ title: "About Maamaar International" }, { name: "description", content: "A trusted Canadian apparel exporter serving UAE and global wholesale buyers since 2013." }, { property: "og:title", content: "About Maamaar International" }, { property: "og:description", content: "Over a decade of reliable overstock apparel sourcing and export." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }),
+  head: () => ({
+    meta: [
+      { title: "About Maamaar International" },
+      {
+        name: "description",
+        content:
+          "A trusted Canadian apparel exporter serving UAE and global wholesale buyers since 2013.",
+      },
+      { property: "og:title", content: "About Maamaar International" },
+      {
+        property: "og:description",
+        content: "Over a decade of reliable overstock apparel sourcing and export.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: AboutPage,
 });
 function AboutPage() {
-  const reasons = [[SearchCheck,"Reliable sourcing network"],[Globe2,"Competitive wholesale pricing"],[ShieldCheck,"Consistent quality control"],[CheckCircle2,"Professional responsive service"],[Handshake,"Long-term partnership focus"]] as const;
-  return <><PageHero eyebrow="Our company" title="Built on trust. Proven across borders." description="Since 2013, we have connected high-quality North American apparel inventory with established wholesale buyers in the UAE and international markets." />
-    <section className="section"><div className="site-container grid gap-14 lg:grid-cols-2"><Reveal><p className="eyebrow">Our story</p><h2 className="section-title">A decade of dependable trade relationships</h2><p className="body-copy">Based in Canada, Maamaar International Limited sources and exports overstock, surplus, and liquidation clothing from leading retailers across the US and Canada. We serve wholesalers, retailers, distributors, and resellers with consistent quality, transparent communication, and professional service.</p></Reveal><div className="timeline"><Reveal><div className="timeline-item"><b>2013</b><h3>Maamaar is established in Canada</h3><p>Wholesale apparel sourcing begins with a focus on trust and quality.</p></div></Reveal><Reveal delay={120}><div className="timeline-item"><b>2018</b><h3>UAE network expands</h3><p>Long-standing relationships develop across a growing buyer network.</p></div></Reveal><Reveal delay={240}><div className="timeline-item"><b>Present</b><h3>Global container-scale service</h3><p>Reliable export coordination for international wholesale markets.</p></div></Reveal></div></div></section>
-    <section className="bg-primary py-12 text-primary-foreground"><div className="site-container grid grid-cols-2 gap-8 text-center md:grid-cols-4"><div><strong className="stat-number"><CountUp value={10} /></strong><span>Years in Business</span></div><div><strong className="stat-number"><CountUp value={1000} /></strong><span>Containers Shipped</span></div><div><strong className="stat-number"><CountUp value={10} /></strong><span>Retail Partners</span></div><div><strong className="stat-number">UAE</strong><span>Primary Market</span></div></div></section>
-    <section className="section bg-secondary"><div className="site-container"><Reveal className="text-center"><p className="eyebrow">Our standards</p><h2 className="section-title mx-auto">Why wholesale buyers choose us</h2></Reveal><div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">{reasons.map(([Icon,title],i)=><Reveal key={title} delay={i*80}><div className="feature-card"><Icon /><h3>{title}</h3></div></Reveal>)}</div></div></section>
-    <section className="section"><div className="site-container grid gap-10 lg:grid-cols-2"><Reveal><p className="eyebrow">Mission</p><h2 className="section-title">Move quality inventory with confidence</h2><p className="body-copy">Our mission is to create dependable trade value by matching quality surplus apparel with serious international buyers.</p></Reveal><Reveal delay={120}><p className="eyebrow">Vision</p><h2 className="section-title">Partnerships that compound over time</h2><p className="body-copy">We aim to be the most trusted Canadian sourcing partner for apparel wholesalers across the UAE and beyond.</p></Reveal></div></section>
-  </>;
+  const reasons = [
+    [SearchCheck, "Reliable sourcing network"],
+    [Globe2, "Competitive wholesale pricing"],
+    [ShieldCheck, "Consistent quality control"],
+    [CheckCircle2, "Professional responsive service"],
+    [Handshake, "Long-term partnership focus"],
+  ] as const;
+  return (
+    <>
+      <PageHero
+        eyebrow="Our company"
+        title="Built on trust. Proven across borders."
+        description="Since 2013, we have connected high-quality North American apparel inventory with established wholesale buyers in the UAE and international markets."
+      />
+      <section className="section">
+        <div className="site-container grid gap-14 lg:grid-cols-2 items-center">
+          <Reveal>
+            <p className="eyebrow">Our story</p>
+            <h2 className="section-title">A decade of dependable trade relationships</h2>
+            <p className="body-copy mt-4">
+              Based in Canada, Maamaar International Limited sources and exports overstock, surplus,
+              and liquidation clothing from leading retailers across the US and Canada. We serve
+              wholesalers, retailers, distributors, and resellers with consistent quality,
+              transparent communication, and professional service.
+            </p>
+            <p className="body-copy mt-3">
+              Our primary export market is the UAE, where we have long-standing relationships with
+              wholesale partners who value consistency, documentation, and responsive export
+              coordination.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-elevated">
+              <img
+                src={warehousePallets}
+                alt="Maamaar International overstock apparel warehouse inventory"
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section bg-secondary/50 pt-0 pb-16">
+        <div className="site-container">
+          <Reveal>
+            <h3 className="section-title mb-8 text-2xl md:text-3xl">Milestones & Growth</h3>
+          </Reveal>
+          <div className="timeline">
+            <Reveal>
+              <div className="timeline-item">
+                <b>2013</b>
+                <h3>Maamaar is established in Canada</h3>
+                <p>Wholesale apparel sourcing begins with a focus on trust and quality.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className="timeline-item">
+                <b>2018</b>
+                <h3>UAE network expands</h3>
+                <p>Long-standing relationships develop across a growing buyer network.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={240}>
+              <div className="timeline-item">
+                <b>Present</b>
+                <h3>Global container-scale service</h3>
+                <p>Reliable export coordination for international wholesale markets.</p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+      <section className="bg-primary py-12 text-primary-foreground">
+        <div className="site-container grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+          <div>
+            <strong className="stat-number">
+              <CountUp value={10} />
+            </strong>
+            <span>Years in Business</span>
+          </div>
+          <div>
+            <strong className="stat-number">
+              <CountUp value={1000} />
+            </strong>
+            <span>Containers Shipped</span>
+          </div>
+          <div>
+            <strong className="stat-number">
+              <CountUp value={10} />
+            </strong>
+            <span>Retail Partners</span>
+          </div>
+          <div>
+            <strong className="stat-number">UAE</strong>
+            <span>Primary Market</span>
+          </div>
+        </div>
+      </section>
+      <section className="section bg-secondary">
+        <div className="site-container">
+          <Reveal className="text-center">
+            <p className="eyebrow">Our standards</p>
+            <h2 className="section-title mx-auto">Why wholesale buyers choose us</h2>
+          </Reveal>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
+            {reasons.map(([Icon, title], i) => (
+              <Reveal key={title} delay={i * 80}>
+                <div className="feature-card">
+                  <Icon />
+                  <h3>{title}</h3>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="site-container grid gap-10 lg:grid-cols-2">
+          <Reveal>
+            <p className="eyebrow">Mission</p>
+            <h2 className="section-title">Move quality inventory with confidence</h2>
+            <p className="body-copy">
+              Our mission is to create dependable trade value by matching quality surplus apparel
+              with serious international buyers.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="eyebrow">Vision</p>
+            <h2 className="section-title">Partnerships that compound over time</h2>
+            <p className="body-copy">
+              We aim to be the most trusted Canadian sourcing partner for apparel wholesalers across
+              the UAE and beyond.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
 }

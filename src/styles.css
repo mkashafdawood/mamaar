@@ -32,3 +32,41 @@
 @media(max-width:1023px){.hero-visual{min-height:520px;max-width:600px;margin:auto;width:100%}.hero .site-container{padding-top:9rem}.scroll-dots{display:none}}
 @media(max-width:640px){.section{padding-block:4.5rem}.hero-visual{min-height:420px}.hero-main-image{left:13%;width:74%}.floating-card{width:100px}.float-three{width:85px}.scroll-cue{display:none}.inventory-marquee:nth-of-type(2){display:none}.stat-value{font-size:1.3rem}.partner-logo{min-width:190px}.quote-form{padding:1.25rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* WhatsApp Floating Action Button & Video Showcase */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.65);
+}
+.whatsapp-fab:active {
+  transform: scale(0.95);
+}
+.video-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--color-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(255, 213, 74, 0.25);
+}
