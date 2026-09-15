@@ -17,8 +17,7 @@ export const Route = createFileRoute("/partners")({
       { property: "og:title", content: "Our Sourcing Partners | Maamaar" },
       {
         property: "og:description",
-        content:
-          "Trusted sourcing relationships across Canada, the US, and international brands.",
+        content: "Trusted sourcing relationships across Canada, the US, and international brands.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

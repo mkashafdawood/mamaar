@@ -169,7 +169,9 @@ function HomePage() {
                       </span>
                     </div>
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-4">
-                      <p className="font-display text-sm font-bold text-white leading-snug">{item.title}</p>
+                      <p className="font-display text-sm font-bold text-white leading-snug">
+                        {item.title}
+                      </p>
                       <a
                         href={`${contact.whatsapp}?text=${encodeURIComponent(`Hello, I'm interested in wholesale lot: ${item.title} (${item.tag})`)}`}
                         target="_blank"

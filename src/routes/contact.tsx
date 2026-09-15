@@ -47,7 +47,10 @@ function ContactPage() {
             <p className="eyebrow">Direct contact</p>
             <h2 className="section-title">Talk to our export team</h2>
             <div className="mt-8 grid gap-4">
-              <a className="contact-row transition-colors duration-150 hover:text-primary" href="tel:+16479018914">
+              <a
+                className="contact-row transition-colors duration-150 hover:text-primary"
+                href="tel:+16479018914"
+              >
                 <Phone />{" "}
                 <span>
                   <b>Phone</b>

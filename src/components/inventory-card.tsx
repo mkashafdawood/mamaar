@@ -31,9 +31,13 @@ export function InventoryCard({ item, compact = false }: { item: Item; compact?:
       <div className="p-5">
         <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           <span>{item.category}</span>
-          <span className="text-[11px] font-normal normal-case text-muted-foreground/80">Full / Mixed Lots</span>
+          <span className="text-[11px] font-normal normal-case text-muted-foreground/80">
+            Full / Mixed Lots
+          </span>
         </div>
-        <h3 className="mt-2 font-display text-base font-bold leading-snug text-primary">{item.title}</h3>
+        <h3 className="mt-2 font-display text-base font-bold leading-snug text-primary">
+          {item.title}
+        </h3>
         {!compact && (
           <div className="mt-4.5 flex items-center gap-2">
             <Button asChild variant="outline" className="flex-1 h-9 text-xs">
