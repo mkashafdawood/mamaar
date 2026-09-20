@@ -20,28 +20,28 @@ export const warehouseShowcase = [
     title: "Overstock Assortment",
     tag: "Mixed Apparel",
     poster: warehouseBin,
-    video: "/tasks/WhatsApp_Video_2026-08-27_at_11.44.47_PM.mp4",
+    video: "/tasks/vid1.mp4",
   },
   {
     id: 2,
     title: "Warehouse Stock",
     tag: "New Arrival",
     poster: warehousePallets,
-    video: "/tasks/WhatsApp_Video_2026-08-27_at_11.44.44_PM.mp4",
+    video: "/tasks/vid2.mp4",
   },
   {
     id: 3,
     title: "Branded Apparel Lot",
     tag: "Branded Lot",
     poster: denimSorting,
-    video: "/tasks/WhatsApp_Video_2026-08-27_at_11.44.46_PM.mp4",
+    video: "/tasks/vid3.mp4",
   },
   {
     id: 4,
     title: "Container Lot Preview",
     tag: "Mixed Apparel",
     poster: baledInventory,
-    video: "/tasks/WhatsApp_Video_2026-08-27_at_11.44.47_PM.mp4",
+    video: "/tasks/vid4.mp4",
   },
 ];
 
