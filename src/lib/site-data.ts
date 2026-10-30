@@ -6,12 +6,13 @@ import warehousePallets from "@/assets/warehouse-pallets-2.jpeg";
 import denimSorting from "@/assets/denim-sorting.jpg";
 import apparelInspection from "@/assets/apparel-inspection.jpg";
 import baledInventory from "@/assets/baled-inventory.jpg";
+import heroApparelShipping from "@/assets/hero-apparel-shipping.jpg";
 
 export const contact = {
   phone: "+1 (647) 901-8914",
   phoneRaw: "+16479018914",
   whatsapp: "https://wa.me/16479018914",
-  email: "info@maamaarinternational.com",
+  email: "maamaarintl@gmail.com",
 };
 
 export const warehouseShowcase = [
@@ -58,42 +59,42 @@ export const inventory = [
     title: "Mixed Hoodies & Sweatshirts",
     tag: "Mixed Apparel",
     category: "Outerwear",
-    image: warehouseBin,
+    image: apparelInspection,
   },
   {
     id: 3,
     title: "John Deere & Workwear Hoodies",
     tag: "Branded Lot",
     category: "Outerwear",
-    image: apparelInspection,
+    image: heroApparelShipping,
   },
   {
     id: 4,
     title: "Denim & Jeans Assorted",
     tag: "Mixed Apparel",
     category: "Denim",
-    image: denimSorting,
+    image: denim,
   },
   {
     id: 5,
     title: "Kids & Family Pajama Sets",
     tag: "Kids & Family",
     category: "Kids/Family Apparel",
-    image: warehousePallets,
+    image: mixed,
   },
   {
     id: 6,
     title: "Base Layer & Athletic Sets",
     tag: "New Arrival",
     category: "Sportswear",
-    image: sportswear,
+    image: warehousePallets,
   },
   {
     id: 7,
     title: "Assorted Bagged Overstock Apparel",
     tag: "Mixed Apparel",
     category: "Mixed Lots",
-    image: baledInventory,
+    image: warehouseBin,
   },
   {
     id: 8,
@@ -107,14 +108,14 @@ export const inventory = [
     title: "Character & Kids Printed Tees",
     tag: "Kids & Family",
     category: "Kids/Family Apparel",
-    image: warehouseBin,
+    image: mixed,
   },
   {
     id: 10,
     title: "Assorted Branded Streetwear",
     tag: "Branded Lot",
     category: "Mixed Lots",
-    image: denim,
+    image: warehousePallets,
   },
 ];
 
